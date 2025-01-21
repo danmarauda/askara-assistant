@@ -1,7 +1,17 @@
 const dotenv = require("dotenv");
-dotenv.config;
+dotenv.config();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['vercel.com'],
+    unoptimized: true
+  },
+  experimental: {
+    appDir: true
+  }
+};
 
 module.exports = nextConfig;
